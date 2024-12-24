@@ -4,9 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
-import brand from '@/assets/port_footer03.png'
 import amazon from '@/assets/amazon.png'
-import apple from '@/assets/apple.png'
 import microsoft from '@/assets/microsoft.png'
 import shoppe from '@/assets/shoppe.png'
 import nike from '@/assets/nike.png'
