@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import clsx from 'clsx'
-
 
 export default function ExperienceBlock() {
   const experiance = [
