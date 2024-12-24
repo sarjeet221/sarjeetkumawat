@@ -51,7 +51,7 @@ export default function Blogs() {
                                 {data.title}
                             </h3>
                             <div className='flex space-x-2 items-center text-green-600'><FaUserEdit /> <span>By {data.author}</span> <span>|</span><span><FaComments /></span>  <span>{data.commentcount}</span></div>
-                            <p className='leading-none my-1 text-green-900'>{data.summry}</p>
+                            <p className='leading-5 my-1 text-green-900'>{data.summry}</p>
                             <Link href={data.url} title="" className='flex items-center text-red-400 font-semibold w-min whitespace-nowrap'>Read More &nbsp; <FaLongArrowAltRight /></Link>
                         </div>
 

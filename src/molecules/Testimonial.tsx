@@ -5,6 +5,12 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import brand from '@/assets/port_footer03.png'
+import amazon from '@/assets/amazon.png'
+import apple from '@/assets/apple.png'
+import microsoft from '@/assets/microsoft.png'
+import shoppe from '@/assets/shoppe.png'
+import nike from '@/assets/nike.png'
+import accenture from '@/assets/accenture.png'
 
 export default function Testimonial() {
     const swiper1Ref = useRef(null);
@@ -47,38 +53,26 @@ export default function Testimonial() {
 
 export function Brandslider() {
     return (
-        <div className='px-8 py-12 bg-blue-700'>
-            <Swiper                
-                slidesPerView={5}
+        <div className='px-8 py-12 bg-blue-400'>
+            <Swiper
+                slidesPerView={2}
+                spaceBetween={15}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                    },
+                }}
             >
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={brand} alt="" className='m-auto'></Image>
-                </SwiperSlide>
-
+                {[amazon, nike, microsoft, shoppe, accenture].map((data,key) => {
+                    return (
+                        <SwiperSlide className='items-center my-auto' key={key}>
+                            <Image src={data} alt="" className='m-auto w-full'></Image>
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
         </div >
 

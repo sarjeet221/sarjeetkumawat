@@ -30,7 +30,7 @@ function WlcSection() {
       <div ref={element} className='flex justify-center absolute lgmax:left-0 lgmax:right-0 right-[55px] z-[-10] lgmax:w-full lg:h-[720px]'>
         <Image src={img} alt='profile image' unoptimized fetchPriority="high" className='max-h-full w-auto h-full' />
       </div>
-      <div className='pt-[400px] smlmax:grid gap-6'>
+      <div className='pt-[350px] smlmax:grid gap-6'>
         <div className='z-[10] lg:ps-[5%] mdmax:px-5 '>
           <h2 className='lg:text-[36px] text-[24px] h-[44px] lgmax:content-end font-semibold ps-2 uppercase w-min whitespace-nowrap after:py-2 after:content-[""] after:block after:h-full after:w-[73%] after:bg-red-300 after:absolute after:top-0 after:z-[-2] after:left-0  relative'>
             <span className='text-[#fff]'>HELLO!</span> Stranger!</h2>
@@ -42,7 +42,7 @@ function WlcSection() {
             <PrimaryBtn>Send Massege</PrimaryBtn>
           </div>
         </div>
-        <div className='flex sml:justify-end justify-center smlmax:-translate-y-10 sml:pe-[28%] smlmax:order-first'>
+        <div className='flex sml:justify-end justify-center smlmax:-translate-y-6 sml:pe-[28%] smlmax:order-first'>
           <PrimaryBtn>Hire Me</PrimaryBtn>
         </div>
       </div>

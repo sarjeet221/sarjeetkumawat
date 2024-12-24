@@ -14,12 +14,12 @@ export default function ContactUs() {
                     after:content-[''] after:block after:h-[2px] after:w-[100px] after:bg-green-300 after:absolute  after:bottom-0">
                     Contact Me
                 </h4>
-                <form action="" className='grid sml:grid-cols-2 gap-5 lg:gap-8 mt-12 p-5 w-full'>
+                <form action="" className='grid sml:grid-cols-2 gap-5 lg:gap-8 lg:mt-12 mt-7 p-5 w-full'>
                     <input type="text" placeholder='Name' className='smlmax:w-full  boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold  ' />
                     <input type="text" placeholder='Last Name' className='smlmax:w-full  boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold  ' />
                     <input type="text" placeholder='Mobile' className='smlmax:w-full  boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold  ' />
                     <input type="email" placeholder='Email' className='smlmax:w-full  boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold  ' />
-                    <textarea name="message" id="" cols={5} className='smlmax:w-full lg:col-span-2 boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold' placeholder='Message'></textarea>
+                    <textarea name="message" id="" cols={5} className='smlmax:mb-4 smlmax:w-full lg:col-span-2 boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold' placeholder='Message'></textarea>
 
                     {/* <input type="submit" /> */}
                     <PrimaryBtn>submit</PrimaryBtn>
@@ -32,7 +32,7 @@ export default function ContactUs() {
                         <Image src={address} alt=''></Image>
                     </div>
                     <div className='mt-3'>
-                        <h4 className="text-[26px] text-blue-400 font-semibold relative text-center flex justify-center
+                        <h4 className="text-xl sml:text-[26px] text-blue-400 font-semibold relative text-center flex justify-center
                     after:content-[''] after:block after:h-[2px] after:w-[100px] after:bg-green-300 after:absolute  after:bottom-0">
                             Address
                         </h4>
@@ -46,7 +46,7 @@ export default function ContactUs() {
                         <Image src={phoe} alt=''></Image>
                     </div>
                     <div className='mt-3'>
-                        <h4 className="text-[26px] text-blue-400 font-semibold relative text-center flex justify-center
+                        <h4 className="text-xl sml:text-[26px] text-blue-400 font-semibold relative text-center flex justify-center
                     after:content-[''] after:block after:h-[2px] after:w-[100px] after:bg-green-300 after:absolute  after:bottom-0">
                             Phone
                         </h4>
@@ -60,7 +60,7 @@ export default function ContactUs() {
                         <Image src={email} alt=''></Image>
                     </div>
                     <div className='mt-3'>
-                        <h4 className="text-[26px] text-blue-400 font-semibold relative text-center flex justify-center
+                        <h4 className="text-xl sml:text-[26px] text-blue-400 font-semibold relative text-center flex justify-center
                     after:content-[''] after:block after:h-[2px] after:w-[100px] after:bg-green-300 after:absolute  after:bottom-0">
                             Email
                         </h4>
