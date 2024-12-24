@@ -13,10 +13,6 @@ export default function About() {
       "Age": 23, "Address": "sumeer nagar mansarodver", "email": "sarjeet@gmail.com", "Residance": "India", "phonme": "8559818396"
     }]
   
-    useEffect(() => {
-  
-    }, [])
-  
     function pishow() {
       pivisiblity ? setpivisiblity(false) : setpivisiblity(true);
     }
