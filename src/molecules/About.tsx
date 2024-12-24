@@ -14,7 +14,8 @@ export default function About() {
   }]
 
   function pishow() {
-    pivisiblity ? setpivisiblity(false) : setpivisiblity(true);
+    // pivisiblity ? setpivisiblity(false) : setpivisiblity(true);
+    setpivisiblity(!pivisiblity);
   }
   return (
     <div className='aboutme lg:px-8 px-5'>
