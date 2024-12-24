@@ -15,6 +15,7 @@ import ContactUs from '@/molecules/ContactUs';
 import Footer from './Footer';
 import About from '@/molecules/About';
 import gsap from 'gsap';
+import { Brandslider } from '@/molecules/Testimonial';
 
 function WlcSection() {
   const element = useRef(null);

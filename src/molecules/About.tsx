@@ -18,7 +18,7 @@ export default function About() {
     }, [])
   
     function pishow() {
-      pivisiblity ? setpivisiblity(false) : setpivisiblity(true)
+      pivisiblity ? setpivisiblity(false) : setpivisiblity(true);
     }
   return (
     <div className='aboutme lg:px-8 px-5'>
@@ -45,7 +45,7 @@ export default function About() {
                     </div>
                   </div>
                   <div onClick={pishow} className="absolute bottom-0 left-0 h-[50px] w-[50px] text-[42px] text-[white] cursor-pointer bg-blue-600 hover:bg-green-400 flex justify-center items-center">
-                    {true ? "+" : "-"}
+                    {pivisiblity ? "-" : "+"}
                   </div>
                 </div>
               </div>
