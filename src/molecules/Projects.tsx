@@ -22,7 +22,7 @@ export default function Projects() {
         </div> */}
 
             <div className='grid lg:grid-cols-3 gap-5'>
-                {projectArray.map((data:any, key:number) => {
+                {projectArray.map((data: any, key: number) => {
                     return (
                         <div className='h-[250px] rounded bg-green-700 flex items-center justify-center relative group hover:shadow-[0px_12px_29px_0px_rgb(0,0,0,0.09)]' key={key}>
                             <Image src={icon} alt='' className='group-hover:scale-125 transition duration-300'></Image>
@@ -33,10 +33,6 @@ export default function Projects() {
                         </div>
                     )
                 })}
-
-https://github.com/sarjeet221
-git config --global user.name "sarjeet"
-git config --global user.email "sarjeetkumawat221@gmail.com"
 
 
             </div>
