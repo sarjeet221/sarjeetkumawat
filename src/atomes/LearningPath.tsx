@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef } from 'react'
+import React, {useRef } from 'react'
 import gsap from 'gsap';
 
 const bgcolor = ['bg-[#ff517e]', 'bg-[#ffc454]', 'bg-[#ff754a]', 'bg-[#00c8da]', 'bg-[#87cefa]', 'bg-[#d8bfd8]', 'bg-[#ffcocb]', 'bg-[#faf0e6]',]

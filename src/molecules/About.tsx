@@ -3,7 +3,7 @@ import Image from 'next/image'
 import img from '../../src/assets/1000184993-removebg-preview.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
-import { BigSubHeading, HeadingWithAfter } from '@/atomes/Heading';
+import {HeadingWithAfter } from '@/atomes/Heading';
 import PrimaryBtn from '@/atomes/PrimaryBtn';
 
 
@@ -52,7 +52,7 @@ export default function About() {
               <div className='basis-8/12 lgmax:mt-12'>
                 <HeadingWithAfter>About Me</HeadingWithAfter>
                 <h3 className='lg:text-[40px] text-2xl text-blue-500 lg:my-4 my-2 font-semibold leading-none'>
-                I'm In The IT Industry With 1 Years Of Experience.</h3>
+                I&apos;m In The IT Industry With 1 Years Of Experience.</h3>
                 {/* <BigSubHeading>I'm In The IT Industry With 1 Years Of Experience.</BigSubHeading> */}
                 <p className='text-base text-[#777777] leading-normal font-semibold'>
                   Results-driven UI Developer with expertise in building high-performance, user-centric web applications.

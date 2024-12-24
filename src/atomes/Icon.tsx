@@ -1,4 +1,4 @@
-import React, { Children, ReactNode } from 'react'
+import React from 'react'
 
 export default function Icon({children,text}:{children:any, text:string}) {
   return (

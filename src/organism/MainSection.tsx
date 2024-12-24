@@ -1,16 +1,15 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image';
 
 import img from '../../src/assets/1000184993-removebg-preview.png'
 import PrimaryBtn from '@/atomes/PrimaryBtn';
 import ExperienceBlock from '@/atomes/ExperienceBlock';
 import { HeadingWithAfter, BigSubHeading } from '@/atomes/Heading';
-import Link from 'next/link';
 import LearningPath from '@/atomes/LearningPath';
 import Services from '@/molecules/Services';
 import Projects from '@/molecules/Projects';
-import Testimonial, { Brandslider } from '@/molecules/Testimonial';
+// import Testimonial, { Brandslider } from '@/molecules/Testimonial';
 import Blogs from '@/molecules/Blogs';
 import ContactUs from '@/molecules/ContactUs';
 import Footer from './Footer';

@@ -17,8 +17,8 @@ export function BigSubHeading({ children }: { children: React.ReactNode }) {
     )
 }
 
-function Headingh1() {
-    return <div>Heading</div>;
-}
+// function Headingh1() {
+//     return <div>Heading</div>;
+// }
 
 // export default Headingh1;

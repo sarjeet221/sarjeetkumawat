@@ -1,5 +1,5 @@
 import Icon from '@/atomes/Icon';
-import SidebarmenuTab from '@/atomes/SidebarmenuTab';
+// import SidebarmenuTab from '@/atomes/SidebarmenuTab';
 import Image from 'next/image';
 import React from 'react';
 import { FaLinkedinIn, FaNewspaper, FaXTwitter } from "react-icons/fa6";
