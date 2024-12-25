@@ -8,14 +8,13 @@ const bordercolor = ['border-[#ff517e]', 'border-[#ffc454]', 'border-[#ff754a]',
 
 
 function Yearcircle({ children, index }: { children: React.ReactNode, index:number }) {
-    console.log("circle +++++++++++++++++++++++++++++++++++++", index)
     return (
         <div key={index} className={`lg:me-6 relative lg:h-[130px] lg:w-[130px] h-[100px] w-[100px] rounded-full border-[13px] ${bordercolor[index]} flex justify-center items-center ${color[index]} text-xl font-bold
         after:content-[''] after:block after:h-[15px] after:rounded-sm after:w-[15px] ${aftercolor[index]} after:absolute lg:after:end-[-19px] after:z-[-3] lg:after:top-0 lg:after:bottom-0 after:my-auto after:rotate-45 smlmax:after:bottom-[-19px]
         before:bg-green-300 smlmax:before:hidden before:content-[''] before:block before:h-[15px] before:rounded-full before:w-[15px] before:border-2 before:border-green-400 before:absolute before:end-[-45px] before:top-0 before:bottom-0 before:my-auto
 
     `}>
-            <p>{children}</p>
+            <p className={color[index]}>{children}</p>
         </div>
     )
 }
@@ -25,7 +24,7 @@ function Locationstrip({ children, index }: { children: React.ReactNode, index: 
         after:content-[''] after:block after:h-[13px] after:rounded-sm after:w-[13px] after:bg-white-400 after:absolute after:start-[-7px] after:z-[-3] after:top-0 after:bottom-0 after:my-auto after:rotate-45 after:shadow-[0px_3px_12px_rgba(0,0,0,0.09)]
     `}>
             <div className='bg-[white] min-w-[80px] flex justify-center items-center h-full'>0{index+1}</div>
-            <div className={`${bgcolor[index]} w-full flex justify-center items-center h-full text-white`}>{children}</div>
+            <div className={`${bgcolor[index]} w-full flex justify-center items-center h-full text-white capitalize`}>{children}</div>
 
         </div>
     )
@@ -39,12 +38,13 @@ function EducationDescription({ title, description, location, index }: { title: 
       gsap.to(boxRef?.current, { y: 0, duration: 0.5 });
     };
     return (
-        <div ref={boxRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`lg:ms-[53px] my-2 relative p-6 lg:w-[400px] w-full flex justify-center items-center ${color[index]} text-base font-bold shadow-[0px_3px_12px_rgba(0,0,0,0.09)]`}>
+        <div ref={boxRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`lg:ms-[53px] my-2 relative p-6 lg:w-[400px] w-full text-left shadow-[0px_3px_12px_rgba(0,0,0,0.09)]`}>
             <div className='absolute lg:-start-[2.5rem] top-[-30px] w-[80%]'>
                 <Locationstrip index={index}>{location}</Locationstrip>
             </div>
-            <h3>{title}</h3>
-            {description}
+            <h3 className='text-xl mt-2 mb-1 font-semibold'>{title}</h3>
+            <p>{description}</p>
+           
         </div>
     )
 }
@@ -54,10 +54,10 @@ function EducationDescription({ title, description, location, index }: { title: 
 export default function LearningPath() {
 
     const learning = [
-        { "srno": 0, "location": "Jaipur", "year": "2024", "title": "M.Sc. IT", "description": "not apa" },
-        { "srno": 1, "location": "jhunjhunu", "year": "2021", "title": "B.Sc.", "description": "nana" },
-        { "srno": 2, "location": "jhunjhunu", "year": "2018", "title": "SR. Secondary", "description": "nanaa" },
-        { "srno": 3, "location": "jhunjhunu", "year": "2016", "title": "Secondary", "description": "nanan" },
+        { "srno": 0, "location": "Jaipur", "year": "2024", "title": "M.Sc. IT", "description": "Advanced studies in IT, focusing on software development, data management, and emerging technologies, providing expertise in practical and theoretical aspects of computing." },
+        { "srno": 1, "location": "jhunjhunu", "year": "2021", "title": "Bachelor of Science", "description": "A broad foundation in scientific principles and methodologies, developing analytical and problem-solving skills across multiple disciplines." },
+        { "srno": 2, "location": "jhunjhunu", "year": "2018", "title": "SR. Secondary", "description": "Specialized in core subjects related to science and technology, building a foundation for higher education in IT and computing" },
+        { "srno": 3, "location": "jhunjhunu", "year": "2016", "title": "Secondary", "description": "Completed foundational education with a strong emphasis on core subjects, setting the stage for further academic and professional growth." },
     ]
 
 

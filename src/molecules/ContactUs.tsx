@@ -51,7 +51,7 @@ export default function ContactUs() {
                             Phone
                         </h4>
                         <p className='text-base font-medium mt-2'>
-                            8559818396
+                            85xx8x83xx
                         </p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ export default function ContactUs() {
                             Email
                         </h4>
                         <p className='text-base font-medium mt-2'>
-                            sarjeetkumawat221@gmail.com
+                            sarjeetkumawatxxx@gmail.com
                         </p>
                     </div>
                 </div>
