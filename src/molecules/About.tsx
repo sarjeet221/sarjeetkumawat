@@ -10,7 +10,7 @@ import PrimaryBtn from '@/atomes/PrimaryBtn';
 export default function About() {
   const [pivisiblity, setpivisiblity] = useState<boolean>(false)
   const pi = [{
-    "Age": 23, "Address": "sumeer nagar mansarodver", "email": "sarjeet@gmail.com", "Residance": "India", "phonme": "8559818396"
+    "Age": 23, "Address": "sumeer nagar mansarodver", "email": "sarjeet@gmail.com", "Residance": "India", "phonme": "85xx818xxx"
   }]
 
   function pishow() {
@@ -18,15 +18,15 @@ export default function About() {
     setpivisiblity(!pivisiblity);
   }
   return (
-    <div className='aboutme lg:px-8 px-5'>
-      <div className='flex lgmax:flex-col lg:space-x-5 lg:mb-10'>
+    <div className='aboutme lg:px-8 px-5 sml:max-w-[500px] md:max-w-[650px] m-auto w1200:max-w-full'>
+      <div className='flex w1200max:flex-col lg:space-x-5 lg:mb-10'>
         <div className='basis-4/12'>
-          <div className=' relative py-10 bg-green-300 lg:ms-10 ms-8 after:content-[""] after:block after:h-full after:w-full after:border-4 after:border-green-500 after:absolute after:start-[-30px] after:z-[-3] after:top-8'>
+          <div className=' relative flex justify-center py-10 bg-green-300 lg:ms-10 md:ms-8 after:hidden after:content-[""] after:md:block after:h-full after:w-full after:border-4 after:border-green-500 after:absolute after:start-[-30px] after:z-[-3] after:top-8'>
             <Image src={img} alt='about' unoptimized />
-            <div className={`${pivisiblity ? "block" : "hidden"} absolute bg-[rgb(0_0_0/88%)] h-full w-full top-0 p-6 text-[white]`}>
+            <div className={`${pivisiblity ? "block" : "hidden"} absolute bg-[rgb(0_0_0/88%)] h-full w-full top-0 sml:p-6 p-3 text-[white]`}>
               <h2 className='text-xl text-blue-400 font-bold'>Sarjeet Kumawat</h2>
               <p>web developer</p>
-              <ul className='my-6'>
+              <ul className='sml:my-6 my-3'>
 
                 {Object.entries(pi[0]).map(([key, value], index: any) => {
                   return <li key={index} className='my-2'><span className='inline-block w-[30%] me-2 text-yellow-500'>{key}</span><span>{value}</span></li>
@@ -41,7 +41,7 @@ export default function About() {
                 <Link href={"#"} title='test' className='p-2 bg-blue-400 hover:bg-green-500'><FaLinkedinIn /></Link>
               </div>
             </div>
-            <div onClick={pishow} className="absolute bottom-0 left-0 h-[50px] w-[50px] text-[42px] text-[white] cursor-pointer bg-blue-600 hover:bg-green-400 flex justify-center items-center">
+            <div onClick={pishow} className="absolute top-0 right-0 h-[50px] w-[50px] text-[42px] text-[white] cursor-pointer bg-blue-600 hover:bg-green-400 flex justify-center items-center">
               {pivisiblity ? "-" : "+"}
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function About() {
             <p className='text-base text-[#777777] leading-normal font-semibold'>React / Frontend Developer</p>
           </div>
           <div className="btn mt-5 flex space-x-4">
-            <PrimaryBtn>Doenload Cv</PrimaryBtn>
+            <PrimaryBtn>Download Cv</PrimaryBtn>
             <PrimaryBtn>Hire Me</PrimaryBtn>
           </div>
         </div>

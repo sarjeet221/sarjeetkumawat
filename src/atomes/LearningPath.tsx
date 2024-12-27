@@ -10,8 +10,8 @@ const bordercolor = ['border-[#ff517e]', 'border-[#ffc454]', 'border-[#ff754a]',
 function Yearcircle({ children, index }: { children: React.ReactNode, index:number }) {
     return (
         <div key={index} className={`lg:me-6 relative lg:h-[130px] lg:w-[130px] h-[100px] w-[100px] rounded-full border-[13px] ${bordercolor[index]} flex justify-center items-center ${color[index]} text-xl font-bold
-        after:content-[''] after:block after:h-[15px] after:rounded-sm after:w-[15px] ${aftercolor[index]} after:absolute lg:after:end-[-19px] after:z-[-3] lg:after:top-0 lg:after:bottom-0 after:my-auto after:rotate-45 smlmax:after:bottom-[-19px]
-        before:bg-green-300 smlmax:before:hidden before:content-[''] before:block before:h-[15px] before:rounded-full before:w-[15px] before:border-2 before:border-green-400 before:absolute before:end-[-45px] before:top-0 before:bottom-0 before:my-auto
+        after:content-[''] after:block after:h-[15px] after:rounded-sm after:w-[15px] ${aftercolor[index]} after:absolute md:after:end-[-19px] after:z-[-3] md:after:top-0 md:after:bottom-0 after:my-auto after:rotate-45 mdmax:after:bottom-[-19px]
+        before:bg-green-300 mdmax:before:hidden before:content-[''] before:block before:h-[15px] before:rounded-full before:w-[15px] before:border-2 before:border-green-400 before:absolute before:end-[-45px] before:top-0 before:bottom-0 before:my-auto
 
     `}>
             <p className={color[index]}>{children}</p>
@@ -62,17 +62,18 @@ export default function LearningPath() {
 
 
     return (
-        <div className="relative w-full smlmax:px-5 after:content-[''] after:hidden after:lg:block after:h-full after:w-[2px] after:bg-green-300 after:absolute after:start-0 after:end-0 after:z-[-3] after:top-0 after:mx-auto
+        <div className="relative w-full smlmax:px-5
+        after:content-[''] after:hidden after:lg:block after:h-full after:w-[2px] after:bg-green-300 after:absolute after:z-[-3] after:top-0 after:left-0 after:right-0 after:m-auto
         ">
             {
                 learning.map((data: any, key: number) => {
                     return (
-                        <div className='sml:flex lg:mb-[100px] mb-10 lgmax:!justify-center' key={key} dir={key % 2 !==0 ? "rtl" :"ltr"}>
-                            <div className='lg:basis-1/2 flex sml:justify-end justify-center items-center smlmax:mb-12'>
+                        <div className='flex mdmax:flex-col mdmax:!max-w-[550px] lgmax:max-w-[700px]  lgmax:mx-auto lg:mb-[100px] w-full mb-10 lgmax:!justify-center' key={key} dir={key % 2 !==0 ? "rtl" :"ltr"}>
+                            <div className='lg:basis-1/2 basis-1/3 flex md:justify-end justify-center items-center mdmax:mb-12 smlmax:!pe-0 lgmax:pe-12'>
                                 <Yearcircle index={data.srno}>{data.year}</Yearcircle>
 
                             </div>
-                            <div className='lg:basis-1/2 flex sml:justify-start justify-center'>
+                            <div className='lg:basis-1/2 basis-2/3 flex sml:justify-start justify-center'>
                                 <EducationDescription title={data.title} description={data.description} location={data.location} index={data.srno} />
 
                             </div>

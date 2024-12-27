@@ -3,10 +3,10 @@ import React from 'react'
 
 export default function ExperienceBlock() {
   const experiance = [
-    { "organization": "Ubuy Technologies Pvt. Ltd", "position": "React/Frontend Developer", "duration": { "join": { "month": "Jun", "year": "2024" }, "resign": { "month": "Dec", "year": "2024" } }, "description": "I collaborate on Ubuy's core Node.js-based and PHP-based projects, ensuring seamless integration between user interfaces and backend systems" },
-    { "organization": "Grras Solutions Pvt. Ltd.", "position": "React Internship", "duration": { "join": { "month": "Mar", "year": "2024" }, "resign": { "month": "Jun", "year": "2024" } }, "description": "I gained hands-on experience building dynamic, responsive web applications using React.js" },
-    { "organization": "Ubuy Technologies Pvt. Ltd", "position": "React/Frontend Developer", "duration": { "join": { "month": "Jun", "year": "2024" }, "resign": { "month": "Dec", "year": "2024" } }, "description": "I collaborate on Ubuy's core Node.js-based and PHP-based projects, ensuring seamless integration between user interfaces and backend systems" },
-    { "organization": "Grras Solutions Pvt. Ltd.", "position": "React Internship", "duration": { "join": { "month": "Mar", "year": "2024" }, "resign": { "month": "Jun", "year": "2024" } }, "description": "I gained hands-on experience building dynamic, responsive web applications using React.js" },
+    { "organization": "Ubuy Technologies", "position": "Frontend Developer", "duration": { "join": { "month": "Jun", "year": "2024" }, "resign": { "month": "Dec", "year": "2024" } }, "description": "I collaborate on Ubuy's core Node.js-based and PHP-based projects, ensuring seamless integration between user interfaces and backend systems" },
+    { "organization": "Grras Solutions", "position": "React Internship", "duration": { "join": { "month": "Mar", "year": "2024" }, "resign": { "month": "Jun", "year": "2024" } }, "description": "I gained hands-on experience building dynamic, responsive web applications using React.js" },
+    { "organization": "Ubuy Technologies", "position": "Frontend Developer", "duration": { "join": { "month": "Jun", "year": "2024" }, "resign": { "month": "Dec", "year": "2024" } }, "description": "I collaborate on Ubuy's core Node.js-based and PHP-based projects, ensuring seamless integration between user interfaces and backend systems" },
+    { "organization": "Grras Solutions", "position": "React Internship", "duration": { "join": { "month": "Mar", "year": "2024" }, "resign": { "month": "Jun", "year": "2024" } }, "description": "I gained hands-on experience building dynamic, responsive web applications using React.js" },
   ]
 
   const bgcolor = ['bg-[#ff517e]', 'bg-[#ffc454]', 'bg-[#ff754a]', 'bg-[#00c8da]', 'bg-[#87cefa]', 'bg-[#d8bfd8]', 'bg-[#ffcocb]', 'bg-[#faf0e6]',]
@@ -18,16 +18,16 @@ export default function ExperienceBlock() {
       <div className='grid lg:grid-cols-2 gap-5 px-5'>
         {experiance.map((data: any, key: number) => {
           return (
-            <div className={`sml:flex smlmax:space-y-3 w-full hover:-translate-y-1`} dir={key % 4 == 2 || key % 4 == 3 ? "rtl" : ""} key={key}>
-              <div className={`lg:px-9 lg:py-4 p-3 relative ${bgcolor[key]} shadow-md text-center text-white shadow-md sml:me-3
-              after:content-[''] after:block after:h-[15px] after:rounded-sm after:w-[15px] ${aftercolor[key]} after:absolute sml:after:end-[-7px] after:z-[-3] sml:after:top-0 after:bottom-0 smlmax:after:bottom-[-7px] smlmax:satrt-4 after:my-auto after:rotate-45`}>
-                <div className='lg:text-[42px] text-[22px]'>{data.duration.join.year}</div>
+            <div className={`sml:flex smlmax:space-y-3 w-full lgmax:max-w-[600px] mx-auto hover:-translate-y-1`} dir={key % 4 == 2 || key % 4 == 3 ? "rtl" : ""} key={key}>
+              <div className={`lg:px-9 lg:py-4 lgmax:basis-1/3 content-center p-3 relative ${bgcolor[key]} shadow-md text-center text-white shadow-md sml:me-3
+                after:content-[''] after:block after:h-[15px] after:rounded-sm after:w-[15px] ${aftercolor[key]} after:absolute sml:after:end-[-7px] after:z-[-3] sml:after:top-0 after:bottom-0 smlmax:after:bottom-[-7px] smlmax:satrt-4 after:my-auto after:rotate-45`}>
+                <div className='lg:text-[42px] text-[28px]'>{data.duration.join.year}</div>
                 <div className='whitespace-nowrap text-xl'> {data.duration.join.month} to {data.duration.resign.month}</div>
-                <div className='lg:text-[42px] text-[22px]'>{data.duration.resign.year}</div>
+                <div className='lg:text-[42px] text-[28px]'>{data.duration.resign.year}</div>
               </div>
-              <div className='p-4 shadow-md grid shadow-lg items-center grid-rows-2 text-left'>
+              <div className='p-4 shadow-md grid shadow-lg lgmax:basis-2/3 items-center grid-rows-2 text-left'>
                 <div className=' mb-2 flex flex-col justify-evenly h-full'>
-                  <h2 className='text-[28px] font-medium leading-none capitalize'>{data.position}</h2>
+                  <h2 className='text-xl font-semibold w1200:text-2xl leading-none capitalize'>{data.position}</h2>
                   <h3 className={`text-base font-semibold capitalize ${color[key]}`}>{data.organization}</h3>
                 </div>
                 <div className='border-t border-[#ccc] text-[#777777] pt-1'>

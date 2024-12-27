@@ -38,7 +38,7 @@ function WlcSection() {
           <p className='ps-2 lg:text-[32px] relative text-[24px] smlmax:text-lg
           after:content-[""] after:block after:h-full after:w-[3px] after:bg-blue-400 after:rounded after:absolute after:start-0 after:top-0 '>Freelance Front-End Developer</p>
           <div className="btn mt-8 flex space-x-4">
-            <PrimaryBtn>Doenload Cv</PrimaryBtn>
+            <PrimaryBtn>Download Cv</PrimaryBtn>
             <PrimaryBtn>Send Massege</PrimaryBtn>
           </div>
         </div>
@@ -55,7 +55,7 @@ function WlcSection() {
 export default function MainSection() {
 
   return (
-    <div className='lg:ml-[130px] flex flex-col lg:space-y-[100px] space-y-12'>
+    <div className='md:ml-[130px] flex flex-col lg:space-y-[100px] space-y-12'>
       <WlcSection />
       <About />
       <div className="education">

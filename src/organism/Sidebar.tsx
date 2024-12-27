@@ -15,7 +15,7 @@ import Link from 'next/link';
 
 export default function Sidebar() {
   return (
-    <div className="hidden lg:block h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar">
+    <div className="hidden md:block h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar">
       <div className='h-[90px] w-[90px] rounded-full overflow-hidden m-auto my-8'>
         <Image src={img} alt='profile image' unoptimized width={90} height={90}  />
       </div>

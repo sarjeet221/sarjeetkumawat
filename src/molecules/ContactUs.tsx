@@ -19,13 +19,13 @@ export default function ContactUs() {
                     <input type="text" placeholder='Last Name' className='smlmax:w-full  boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold  ' />
                     <input type="text" placeholder='Mobile' className='smlmax:w-full  boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold  ' />
                     <input type="email" placeholder='Email' className='smlmax:w-full  boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold  ' />
-                    <textarea name="message" id="" cols={5} className='smlmax:mb-4 smlmax:w-full lg:col-span-2 boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold' placeholder='Message'></textarea>
+                    <textarea name="message" id="" cols={5} className='smlmax:mb-4 smlmax:w-full sml:col-span-2 boder-0 outline-none border-b border-[#ddd] lg:pb-5 pb-3 lg:placeholder:text-xl placeholder:text-sm placeholder:font-semibold' placeholder='Message'></textarea>
 
                     {/* <input type="submit" /> */}
                     <PrimaryBtn>submit</PrimaryBtn>
                 </form>
             </div>
-            <div className='grid sml:grid-cols-3 mt-12 gap-8 '>
+            <div className='grid sml:grid-cols-3 mt-12 gap-y-8 px-1 '>
 
                 <div>
                     <div className='h-[40px] flex justify-center'>
@@ -64,7 +64,7 @@ export default function ContactUs() {
                     after:content-[''] after:block after:h-[2px] after:w-[100px] after:bg-green-300 after:absolute  after:bottom-0">
                             Email
                         </h4>
-                        <p className='text-base font-medium mt-2'>
+                        <p className='text-base font-medium mt-2 break-all	'>
                             sarjeetkumawatxxx@gmail.com
                         </p>
                     </div>
