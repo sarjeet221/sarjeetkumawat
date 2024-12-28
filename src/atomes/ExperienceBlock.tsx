@@ -15,7 +15,7 @@ export default function ExperienceBlock() {
 
   
     return (
-      <div className='grid lg:grid-cols-2 gap-5 px-5'>
+      <div className='grid lg:grid-cols-2 gap-5 px-5 max-w-[1700px] mx-auto'>
         {experiance.map((data: any, key: number) => {
           return (
             <div className={`sml:flex smlmax:space-y-3 w-full lgmax:max-w-[600px] mx-auto hover:-translate-y-1`} dir={key % 4 == 2 || key % 4 == 3 ? "rtl" : ""} key={key}>

@@ -62,7 +62,7 @@ export default function LearningPath() {
 
 
     return (
-        <div className="relative w-full smlmax:px-5
+        <div className="relative w-full smlmax:px-5 max-w-[1700px] mx-auto
         after:content-[''] after:hidden after:lg:block after:h-full after:w-[2px] after:bg-green-300 after:absolute after:z-[-3] after:top-0 after:left-0 after:right-0 after:m-auto
         ">
             {

@@ -13,19 +13,19 @@ export default function Projects() {
     ]
 
     return (
-        <div className='px-5 mt-5'>
+        <div className='px-5 mt-5 max-w-[1700px] mx-auto'>
             {/* <div className="menubar my-3 text-xl text-blue-400 flex space-x-6 justify-center">
             <Link href={""} title=''>All</Link>
             <Link href={""} title=''>Web</Link>
             <Link href={""} title=''>Figma</Link>
             <Link href={""} title=''>Node</Link>
             <Link href={""} title=''>React</Link>
-        </div> */}
+         </div> */}
 
-            <div className='grid lg:grid-cols-3 gap-5'>
+            <div className='grid sml:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {projectArray.map((data: any, key: number) => {
                     return (
-                        <div className='h-[250px] rounded bg-[#000] flex items-center justify-center relative group hover:shadow-[0px_12px_29px_0px_rgb(0,0,0,0.09)] overflow-hidden' key={key}>
+                        <div className='rounded bg-[#000] max-w-[400px] m-auto flex items-center justify-center relative group hover:shadow-[0px_12px_29px_0px_rgb(0,0,0,0.09)] overflow-hidden' key={key}>
                             <Image src={data.img} alt='' width={1920} height={1080} className='group-hover:scale-[1.08] transition duration-500 m-auto'></Image>
                             <div className='text-white absolute h-full w-full bg-transparesnt p-5 group-hover:opacity-100 flex opacity-0 transition duration-500 flex-col justify-end cursor-pointer bg-gradient-to-t from-black to-60% bg-bland-multiply'>
                                 <h3 className='text-xl'>{data.title}</h3>

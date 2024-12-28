@@ -1,23 +1,55 @@
+"use client"
 import Icon from '@/atomes/Icon';
 // import SidebarmenuTab from '@/atomes/SidebarmenuTab';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaLinkedinIn, FaNewspaper, FaXTwitter } from "react-icons/fa6";
 import { PiSuitcaseSimple } from "react-icons/pi";
 import { LuPhoneCall } from "react-icons/lu";
 import { FaQuoteLeft } from "react-icons/fa";
 import img from '../../src/assets/1000181369.png'
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
-import Link from 'next/link';
-
-
-
+import Link from "next/link";
+import { RiMenuAddLine } from "react-icons/ri";
+import { gsap } from "gsap";
 
 export default function Sidebar() {
-  return (
-    <div className="hidden md:block h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar">
+  const [isOpen, setIsOpen] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
+
+  const toggleSidebar = () => {
+    if (isOpen) {
+      gsap.to(sidebarRef.current, { duration: 0.5, x: "-250px", ease: "power2.out" });
+    } else {
+      gsap.to(sidebarRef.current, { duration: 0.5, x: "0px", ease: "power2.out" });
+    }
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event:MouseEvent) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node) && isOpen) {
+      gsap.to(sidebarRef.current, { duration: 0.5, x: "-250px", ease: "power2.out" });
+      setIsOpen(false);
+    }
+  };
+
+  // Attach event listener for clicks
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  return (<>
+    <div onClick={toggleSidebar} className="menu md:hidden fixed top-0 end-0 text-2xl z-10 p-5 text-green-500">
+      <RiMenuAddLine />
+    </div>
+
+    <div ref={sidebarRef} className={`mdmax:translate-x-[-250px] block ${isOpen && ""} !z-[10] h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar`}>
       <div className='h-[90px] w-[90px] rounded-full overflow-hidden m-auto my-8'>
-        <Image src={img} alt='profile image' unoptimized width={90} height={90}  />
+        <Image src={img} alt='profile image' unoptimized width={90} height={90} />
       </div>
 
       {/* <SidebarmenuTab title='test' link='test' img='' /> */}
@@ -56,6 +88,6 @@ export default function Sidebar() {
           </Link>
         </div>
       </div>
-    </div >
+    </div > </>
   );
 }

@@ -13,7 +13,7 @@ export default function Services() {
     ]
 
     return (
-        <div className='grid sml:grid-cols-2 lg:grid-cols-3 gap-5 px-5'>
+        <div className='grid sml:grid-cols-2 lg:grid-cols-3 gap-5 px-5 max-w-[1700px] mx-auto'>
 
             {
                 serviceslist.map((data: any, key: number) => {
