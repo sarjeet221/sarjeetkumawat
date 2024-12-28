@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import img from '../../src/assets/1000184993-removebg-preview.png'
+import img from '../../src/assets/newsideview.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import { HeadingWithAfter } from '@/atomes/Heading';
@@ -22,13 +22,12 @@ export default function About() {
     <div className='aboutme lg:px-8 px-5 sml:max-w-[500px] md:max-w-[650px] w1200:max-w-[1700px] mx-auto animate-on-scroll'>
       <div className='flex w1200max:flex-col lg:space-x-5 lg:mb-10'>
         <div className='basis-4/12'>
-          <div className=' relative flex justify-center py-10 bg-green-300 lg:ms-10 md:ms-8 after:hidden after:content-[""] after:md:block after:h-full after:w-full after:border-4 after:border-green-500 after:absolute after:start-[-30px] after:z-[-3] after:top-8'>
-            <Image src={img} alt='about' unoptimized />
+          <div className=' relative flex justify-center bg-green-300 lg:ms-10 md:ms-8 after:hidden after:content-[""] after:md:block after:h-full after:w-full after:border-4 after:border-green-500 after:absolute after:start-[-30px] after:z-[-3] after:top-8'>
+            <Image src={img} width={2063} height={3300} className='w-auto h-full max-h-[450px]'  alt='about' unoptimized />
             <div className={`${pivisiblity ? "block" : "hidden"} absolute bg-[rgb(0_0_0/88%)] h-full w-full top-0 sml:p-6 p-3 text-[white]`}>
               <h2 className='text-xl text-blue-400 font-bold'>Sarjeet Kumawat</h2>
               <p>web developer</p>
               <ul className='sml:my-6 my-3'>
-
                 {Object.entries(pi[0]).map(([key, value], index: any) => {
                   return <li key={index} className='my-2'><span className='inline-block w-[30%] me-2 text-yellow-500'>{key}</span><span>{value}</span></li>
                 })}

@@ -114,7 +114,7 @@ export default function MainSection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: element, // Trigger animation when this element enters the viewport
-            start: "top center", // Start when the element's top is 90% from the top of the viewport
+            start: "top 75%", // Start when the element's top is 90% from the top of the viewport
             toggleActions: "play none none none", // Play animation once
           },
         }
