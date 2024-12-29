@@ -12,42 +12,52 @@ import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { RiMenuAddLine } from "react-icons/ri";
 import { gsap } from "gsap";
+import { SlClose } from "react-icons/sl";
+
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement | null>(null);
-
   const toggleSidebar = () => {
     if (isOpen) {
-      gsap.to(sidebarRef.current, { duration: 0.5, x: "-250px", ease: "power2.out" });
+      gsap.to(sidebarRef.current, { duration: 1, x: "-250px", ease: "power2.out" });
     } else {
       gsap.to(sidebarRef.current, { duration: 0.5, x: "0px", ease: "power2.out" });
     }
+    console.log("++++++++++++++++++++++++++++++++++++++",isOpen)
+
     setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event:MouseEvent) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node) && isOpen) {
-      gsap.to(sidebarRef.current, { duration: 0.5, x: "-250px", ease: "power2.out" });
-      setIsOpen(false);
-    }
-  };
+  // const handleClickOutside = (event:MouseEvent) => {
+  //   if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node) && isOpen) {
+  //     gsap.to(sidebarRef.current, { duration: 0.5, x: "-250px", ease: "power2.out" });
+  //     setIsOpen(false);
+  //     console.log("outslide slcikc hendal ++===============",isOpen)
+  //   }
+  // };
 
-  // Attach event listener for clicks
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+  // // Attach event listener for clicks
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen]);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [isOpen]);
 
   return (<>
-    <div onClick={toggleSidebar} className="menu md:hidden fixed top-0 end-0 text-2xl z-10 p-5 text-green-500">
-      <RiMenuAddLine />
+    <div onClick={toggleSidebar} className={`${isOpen && ""} menu md:hidden fixed top-0 end-0 text-2xl z-10 pt-3 pe-5 text-white`}>
+      
+      <div className='p-1 bg-[#00800059] rounded '>
+        {isOpen ?<SlClose />:
+      <RiMenuAddLine />}
+        </div>
+
     </div>
 
-    <div ref={sidebarRef} className={`mdmax:translate-x-[-250px] block ${isOpen && ""} !z-[10] h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar`}>
+    <div ref={sidebarRef} className={`mdmax:translate-x-[-250px] block  !z-[10] h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar`}>
+      
       <div className='h-[90px] w-[90px] rounded-full overflow-hidden m-auto my-8'>
         <Image src={img} alt='profile image' unoptimized width={90} height={90} />
       </div>

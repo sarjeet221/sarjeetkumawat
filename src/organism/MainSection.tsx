@@ -110,7 +110,7 @@ export default function MainSection() {
         {
           opacity: 1, // End fully visible
           y: 0, // End at its original position
-          duration: 1.5, // Animation duration
+          duration: 2, // Animation duration
           ease: "power2.out",
           scrollTrigger: {
             trigger: element, // Trigger animation when this element enters the viewport

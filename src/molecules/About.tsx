@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import img from '../../src/assets/newsideview.png'
+import img from '../../src/assets/halfside.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import { HeadingWithAfter } from '@/atomes/Heading';
@@ -23,7 +23,7 @@ export default function About() {
       <div className='flex w1200max:flex-col lg:space-x-5 lg:mb-10'>
         <div className='basis-4/12'>
           <div className=' relative flex justify-center bg-green-300 lg:ms-10 md:ms-8 after:hidden after:content-[""] after:md:block after:h-full after:w-full after:border-4 after:border-green-500 after:absolute after:start-[-30px] after:z-[-3] after:top-8'>
-            <Image src={img} width={2063} height={3300} className='w-auto h-full max-h-[450px]'  alt='about' unoptimized />
+            <Image src={img} width={2063} height={3300} className='w-auto h-full max-h-[300px] lg:max-h-[450px]'  alt='about' unoptimized />
             <div className={`${pivisiblity ? "block" : "hidden"} absolute bg-[rgb(0_0_0/88%)] h-full w-full top-0 sml:p-6 p-3 text-[white]`}>
               <h2 className='text-xl text-blue-400 font-bold'>Sarjeet Kumawat</h2>
               <p>web developer</p>
@@ -41,7 +41,7 @@ export default function About() {
                 <Link href={"#"} title='test' className='p-2 bg-blue-400 hover:bg-green-500'><FaLinkedinIn /></Link>
               </div>
             </div>
-            <div onClick={pishow} className="absolute top-0 right-0 h-[50px] w-[50px] text-[42px] text-[white] cursor-pointer bg-blue-600 hover:bg-green-400 flex justify-center items-center">
+            <div onClick={pishow} className="absolute top-0 right-0 h-[50px] w-[50px] text-[42px] text-[white] cursor-pointer bg-blue-400 hover:bg-blue-500 flex justify-center items-center">
               {pivisiblity ? "-" : "+"}
             </div>
           </div>
