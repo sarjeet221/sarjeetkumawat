@@ -123,7 +123,7 @@ export default function MainSection() {
   }, []);
 
   return (
-    <div className='md:ml-[130px] flex flex-col lg:space-y-[100px] space-y-12'>
+    <div className='md:ml-[126px] flex flex-col lg:space-y-[100px] space-y-12'>
       <WlcSection />
       <About />
       <div className="education animate-on-scroll">

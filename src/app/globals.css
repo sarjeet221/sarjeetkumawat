@@ -38,7 +38,7 @@ p{
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 128, 0, 0.863); 
+    background-color: #22c55e; 
     border-radius: 4px; 
   }
 }
