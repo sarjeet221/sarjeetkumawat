@@ -7,7 +7,7 @@ import { FaLinkedinIn, FaNewspaper, FaXTwitter } from "react-icons/fa6";
 import { PiSuitcaseSimple } from "react-icons/pi";
 import { LuPhoneCall } from "react-icons/lu";
 import { FaQuoteLeft } from "react-icons/fa";
-import img from '../../src/assets/1000181369.png'
+import img from '../../src/assets/sldecopy.png'
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { RiMenuAddLine } from "react-icons/ri";
@@ -24,7 +24,6 @@ export default function Sidebar() {
     } else {
       gsap.to(sidebarRef.current, { duration: 0.5, x: "0px", ease: "power2.out" });
     }
-    console.log("++++++++++++++++++++++++++++++++++++++",isOpen)
 
     setIsOpen(!isOpen);
   };
@@ -58,7 +57,7 @@ export default function Sidebar() {
 
     <div ref={sidebarRef} className={`mdmax:translate-x-[-250px] block  !z-[10] h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar`}>
       
-      <div className='h-[90px] w-[90px] rounded-full overflow-hidden m-auto my-8'>
+      <div className='h-[90px] w-[90px] rounded-full overflow-hidden m-auto my-8 bg-green-400 outline'>
         <Image src={img} alt='profile image' unoptimized width={90} height={90} />
       </div>
 
@@ -73,7 +72,7 @@ export default function Sidebar() {
         <Icon text='Testimonials'>
           <FaQuoteLeft />
         </Icon>
-        <Icon text='Contact'>
+        <Icon text='contact'>
           <LuPhoneCall />
         </Icon>
       </div>

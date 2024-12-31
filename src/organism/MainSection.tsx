@@ -9,7 +9,7 @@ import { HeadingWithAfter, BigSubHeading } from '@/atomes/Heading';
 import LearningPath from '@/atomes/LearningPath';
 import Services from '@/molecules/Services';
 import Projects from '@/molecules/Projects';
-// import Testimonial, { Brandslider } from '@/molecules/Testimonial';
+
 import Blogs from '@/molecules/Blogs';
 import ContactUs from '@/molecules/ContactUs';
 import Footer from './Footer';
@@ -25,8 +25,8 @@ const fileUrl = '/sarjeet kumawat react developer.pdf';
 
   export function handleDownload() {
     const link = document.createElement("a");
-    link.href = fileUrl; // Specify the file URL
-    link.download = "Sarjeet resume.pdf"; // File name for the download
+    link.href = fileUrl; 
+    link.download = "Sarjeet resume.pdf"; 
     link.click();
   };
 
@@ -40,24 +40,24 @@ function WlcSection() {
     })
     const nameani = document.querySelector('.animated-heading');
     
-    // GSAP animation when the page loads
+    
     gsap.fromTo(
       nameani,
       {
-        backgroundSize: '0% 100%', // Initial state (background size 0%)
-        backgroundPosition: 'left center', // Start position is on the left
+        backgroundSize: '0% 100%', 
+        backgroundPosition: 'left center', 
       },
       {
-        backgroundSize: '100% 100%', // Fill the background to full width
-        duration: 1.5, // Duration of the full fill
-        ease: 'power2.out', // Easing for the fill effect
+        backgroundSize: '100% 100%', 
+        duration: 1.5, 
+        ease: 'power2.out', 
         onComplete: () => {
-          // After the full fill, start shrinking from the left side
+          
           gsap.to(nameani, {
-            backgroundSize: '100% 100%', // Keep background full width
-            backgroundPosition: 'right center', // Shrink background from left
-            duration: 1, // Duration of shrinking
-            ease: 'power2.in', // Easing for shrinking effect
+            backgroundSize: '100% 100%', 
+            backgroundPosition: 'right center', 
+            duration: 1, 
+            ease: 'power2.in', 
           });
         },
       }
@@ -75,7 +75,7 @@ function WlcSection() {
         <Image src={img} alt='profile image' unoptimized fetchPriority="high" className='max-h-full w-auto h-full' />
       </div>
       <div className='pt-[350px] smlmax:grid gap-6'>
-        <div className='z-[10] lg:ps-[5%] mdmax:px-5 '>
+        <div className='z-[10] sml:ps-[5%] mdmax:px-5 '>
           <h2 className='lg:text-[36px] text-[24px] h-[44px] lgmax:content-end font-semibold ps-2 uppercase w-min whitespace-nowrap 
           after:py-2 after:content-[""] after:block after:h-full after:w-[73%] after:bg-[#ffc454] after:absolute after:top-0 after:z-[-2] after:left-0  relative'>
             <span className='text-[#fff]'>HELLO!</span> Stranger!</h2>
@@ -104,18 +104,18 @@ export default function MainSection() {
       gsap.fromTo(
         element,
         {
-          opacity: 0, // Start hidden
-          y: 75, // Start slightly below its position
+          opacity: 0, 
+          y: 75, 
         },
         {
-          opacity: 1, // End fully visible
-          y: 0, // End at its original position
-          duration: 2, // Animation duration
+          opacity: 1, 
+          y: 0, 
+          duration: 2, 
           ease: "power2.out",
           scrollTrigger: {
-            trigger: element, // Trigger animation when this element enters the viewport
-            start: "top 75%", // Start when the element's top is 90% from the top of the viewport
-            toggleActions: "play none none none", // Play animation once
+            trigger: element, 
+            start: "top 75%", 
+            toggleActions: "play none none none", 
           },
         }
       );
@@ -149,14 +149,14 @@ export default function MainSection() {
         <Services />
 
       </div>
-      <div className="projects bg-[#fff] animate-on-scroll">
+      <div id='Portfolio' className="projects bg-[#fff] animate-on-scroll">
         <div className='text-center mb-12'>
           <HeadingWithAfter>Quality Work</HeadingWithAfter>
           <BigSubHeading>My Projects</BigSubHeading>
         </div>
         <Projects />
       </div>
-      {/* <div className="clinents py-10 relative
+      {/* <div id="Testimonials" className="clinents py-10 relative
           after:content-[''] after:block after:h-[300px] after:w-[300px] after:bg-green-300 after:absolute after:end-[0] after:z-[-1] after:top-0
           before:content-[''] before:block before:h-[300px] before:w-[300px] before:bg-green-300 before:absolute before:start-0 before:z-[-1] before:bottom-0
         ">

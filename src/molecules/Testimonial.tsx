@@ -51,7 +51,7 @@ export default function Testimonial() {
 
 export function Brandslider() {
     return (
-        <div className='px-8 py-12 w-full max-w-[1700px] mx-auto animate-on-scroll'>
+        <div id='Testimonials' className='px-8 py-12 w-full max-w-[1700px] mx-auto animate-on-scroll'>
             <Swiper
                 slidesPerView={2}
                 spaceBetween={15}

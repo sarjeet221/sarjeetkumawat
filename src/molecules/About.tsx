@@ -19,7 +19,7 @@ export default function About() {
     setpivisiblity(!pivisiblity);
   }
   return (
-    <div className='aboutme lg:px-8 px-5 sml:max-w-[500px] md:max-w-[650px] w1200:max-w-[1700px] mx-auto animate-on-scroll'>
+    <div id='About' className='aboutme lg:px-8 px-5 sml:max-w-[500px] md:max-w-[650px] w1200:max-w-[1700px] mx-auto animate-on-scroll'>
       <div className='flex w1200max:flex-col lg:space-x-5 lg:mb-10'>
         <div className='basis-4/12'>
           <div className=' relative flex justify-center bg-green-300 lg:ms-10 md:ms-8 after:hidden after:content-[""] after:md:block after:h-full after:w-full after:border-4 after:border-green-500 after:absolute after:start-[-30px] after:z-[-3] after:top-8'>

@@ -62,13 +62,13 @@ export default function LearningPath() {
 
 
     return (
-        <div className="relative w-full smlmax:px-5 max-w-[1700px] mx-auto
+        <div className="relative w-full smlmax:px-5 max-w-[1700px] mx-auto grid lg:gap-[100px] gap-10
         after:content-[''] after:hidden after:lg:block after:h-full after:w-[2px] after:bg-green-300 after:absolute after:z-[-3] after:top-0 after:left-0 after:right-0 after:m-auto
         ">
             {
                 learning.map((data: any, key: number) => {
                     return (
-                        <div className='flex mdmax:flex-col mdmax:!max-w-[550px] lgmax:max-w-[700px]  lgmax:mx-auto lg:mb-[100px] w-full mb-10 lgmax:!justify-center' key={key} dir={key % 2 !==0 ? "rtl" :"ltr"}>
+                        <div className='flex mdmax:flex-col mdmax:!max-w-[550px] lgmax:max-w-[700px] w-full lgmax:mx-auto lgmax:!justify-center' key={key} dir={key % 2 !==0 ? "rtl" :"ltr"}>
                             <div className='lg:basis-1/2 basis-1/3 flex md:justify-end justify-center items-center mdmax:mb-12 smlmax:!pe-0 lgmax:pe-12'>
                                 <Yearcircle index={data.srno}>{data.year}</Yearcircle>
 
