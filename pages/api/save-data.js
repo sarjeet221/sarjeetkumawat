@@ -7,10 +7,12 @@ export default async function handler(req, res) {
             const bodyData = JSON.stringify(req.body);
 
             // Save the form data into the blob
-            const { url } = await put('form-data.json', new Blob([bodyData]), {
-                access: 'public', // or 'private', depending on your needs
-                contentType: 'application/json',
-            });
+            const { url } = await put('articles/blob.txt', 'Hello World!', { access: 'public' });
+
+            // const { url } = await put('form-data.json', new Blob([bodyData]), {
+            //     access: 'public', // or 'private', depending on your needs
+            //     contentType: 'application/json',
+            // });
 
             res.status(200).json({ message: 'Data saved successfully', url });
         } catch (error) {
