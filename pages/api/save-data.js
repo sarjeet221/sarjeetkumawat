@@ -4,7 +4,7 @@ import { put } from '@vercel/blob';
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
-            const bodyData = JSON.stringify(req.body);
+            // const bodyData = JSON.stringify(req.body);
 
             // Save the form data into the blob
             const { url } = await put('articles/blob.txt', 'Hello World!', { access: 'public' });
