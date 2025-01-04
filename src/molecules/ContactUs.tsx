@@ -15,29 +15,52 @@ export default function ContactUs() {
         formState: { errors },
     } = useForm();
 
-    async function sendData(data: object) {
+    // async function sendData(data: object) {
+    //     try {
+    //         const response = await fetch("https://node-backend-six-zeta.vercel.app/data/", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify(data),
+    //         });
+
+    //         if (!response.ok) {
+    //             throw new Error(`HTTP error! Status: ${response.status}`);
+    //         }
+
+    //         const result = await response.text();
+    //         console.log("Request data:", data);
+    //         console.log("Response from server:", result);
+    //         setresponsefromserver(result)
+
+    //     } catch (error: any) {
+    //         console.log("Error occurred while sending data:", error.message);
+    //     }
+    // }
+
+    const onSubmit = async (data:any) => {
         try {
-            const response = await fetch("http://localhost:4000/", {
-                method: "POST",
+            const response = await fetch('/api/save-data', {
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data),
             });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+    
+            const result = await response.json();
+    
+            if (response.ok) {
+                console.log('Form data saved:', result.url);
+                setresponsefromserver(result.message)
+            } else {
+                console.error('Error:', result.message);
             }
-
-            const result = await response.text();
-            console.log("Request data:", data);
-            console.log("Response from server:", result);
-            setresponsefromserver(result)
-
-        } catch (error: any) {
-            console.error("Error occurred while sending data:", error.message);
+        } catch (error) {
+            console.error('Error submitting the form:', error);
         }
-    }
+    };
     return (
 
         <div className='mt-12 w-full lg:w-7/12 bg-[white-200] text-center m-auto'>
@@ -96,15 +119,15 @@ export default function ContactUs() {
                     ></textarea>
 
                     <div className='sml:col-span-2 text-left'>
-                        {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
-                        {errors.lastName && <p className="text-red-500 text-sm">{errors?.lastName?.message}</p>}
-                        {errors.mobile && <p className="text-red-500 text-sm">{errors.mobile.message}</p>}
-                        {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
-                        {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+                        {errors.name && <p className="text-red-500 text-sm">{String(errors.name.message)}</p>}
+                        {errors.lastName && <p className="text-red-500 text-sm">{String(errors?.lastName?.message)}</p>}
+                        {errors.mobile && <p className="text-red-500 text-sm">{String(errors.mobile.message)}</p>}
+                        {errors.email && <p className="text-red-500 text-sm">{String(errors.email.message)}</p>}
+                        {errors.message && <p className="text-red-500 text-sm">{String(errors.message.message)}</p>}
                         {responsefromserver && <p className="text-green-500 text-sm">{responsefromserver}</p>}
                         
                     </div>
-                    <PrimaryBtn event={handleSubmit(sendData)}>submit</PrimaryBtn>
+                    <PrimaryBtn event={handleSubmit(onSubmit)}>submit</PrimaryBtn>
                 </form>
             </div>
 
