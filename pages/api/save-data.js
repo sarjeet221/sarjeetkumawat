@@ -4,11 +4,11 @@ import { put } from '@vercel/blob';
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
-            const { name, ...data } = req.body;
+            const { name,mobile} = req.body;
             const bodyData = JSON.stringify(req.body);
             const bufferData = Buffer.from(bodyData);
             
-            const { url } = await put(`contact/${name}.json`, bufferData, { 
+            const { url } = await put(`contact/${name+mobile}.json`, bufferData, { 
                 access: 'public', 
                 contentType: 'application/json',
             });
