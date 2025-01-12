@@ -29,7 +29,7 @@ function Locationstrip({ children, index }: { children: React.ReactNode, index: 
         </div>
     )
 }
-function EducationDescription({ title, description, location, index }: { title: string, description: string, index: number, location: string }) {
+function EducationDescription({ title, description, location, index, institute }: { title: string, description: string, index: number, location: string, institute:string }) {
     const boxRef =  useRef(null);
     const handleMouseEnter = () => {
       gsap.to(boxRef?.current, { y: -15, duration: 0.5 });
@@ -43,6 +43,7 @@ function EducationDescription({ title, description, location, index }: { title: 
                 <Locationstrip index={index}>{location}</Locationstrip>
             </div>
             <h3 className='text-xl mt-2 mb-1 font-semibold'>{title}</h3>
+            <h4 className=''>{institute}</h4>
             <p>{description}</p>
            
         </div>
@@ -54,10 +55,10 @@ function EducationDescription({ title, description, location, index }: { title: 
 export default function LearningPath() {
 
     const learning = [
-        { "srno": 0, "location": "Jaipur", "year": "2024", "title": "M.Sc. IT", "description": "Advanced studies in IT, focusing on software development, data management, and emerging technologies, providing expertise in practical and theoretical aspects of computing." },
-        { "srno": 1, "location": "jhunjhunu", "year": "2021", "title": "Bachelor of Science", "description": "A broad foundation in scientific principles and methodologies, developing analytical and problem-solving skills across multiple disciplines." },
-        { "srno": 2, "location": "jhunjhunu", "year": "2018", "title": "SR. Secondary", "description": "Specialized in core subjects related to science and technology, building a foundation for higher education in IT and computing" },
-        { "srno": 3, "location": "jhunjhunu", "year": "2016", "title": "Secondary", "description": "Completed foundational education with a strong emphasis on core subjects, setting the stage for further academic and professional growth." },
+        { "srno": 0, "institute":"S.S. Jain Subodh PG College", "location": "Jaipur", "year": "2024", "title": "M.Sc. IT", "description": "Advanced studies in IT, focusing on software development, data management, and emerging technologies, providing expertise in practical and theoretical aspects of computing." },
+        { "srno": 1, "institute":"S.V. Govt PG College", "location": "Khetri", "year": "2021", "title": "Bachelor of Science", "description": "A broad foundation in scientific principles and methodologies, developing analytical and problem-solving skills across multiple disciplines." },
+        { "srno": 2, "institute":"Govt. SR. Sec. School", "location": "Khetri Nagar", "year": "2018", "title": "SR. Secondary", "description": "Specialized in core subjects related to science, building a foundation for higher education" },
+        { "srno": 3, "institute":"Govt. SR. Sec. School", "location": "Manota Kalan", "year": "2016", "title": "Secondary", "description": "Completed foundational education with a strong emphasis on core subjects, setting the stage for further academic and professional growth." },
     ]
 
 
@@ -74,7 +75,7 @@ export default function LearningPath() {
 
                             </div>
                             <div className='lg:basis-1/2 basis-2/3 flex sml:justify-start justify-center'>
-                                <EducationDescription title={data.title} description={data.description} location={data.location} index={data.srno} />
+                                <EducationDescription title={data.title} institute={data.institute} description={data.description} location={data.location} index={data.srno} />
 
                             </div>
                         </div>

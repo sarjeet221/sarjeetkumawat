@@ -7,7 +7,8 @@ import { FaLinkedinIn, FaNewspaper, FaXTwitter } from "react-icons/fa6";
 import { PiSuitcaseSimple } from "react-icons/pi";
 import { LuPhoneCall } from "react-icons/lu";
 import { FaQuoteLeft } from "react-icons/fa";
-import img from '../../src/assets/sldecopy.png'
+// import img from '../../src/assets/IMG_20250112_210521.png'
+import img from '../../src/assets/newsildbar.png'
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { RiMenuAddLine } from "react-icons/ri";
@@ -57,7 +58,7 @@ export default function Sidebar() {
 
     <div ref={sidebarRef} className={`mdmax:translate-x-[-250px] block  !z-[10] h-[100vh] bg-white overflow-hidden overflow-y-auto fixed left-0 top-0 bg-[#eee] thin_scrollbar`}>
       
-      <div className='h-[90px] w-[90px] rounded-full overflow-hidden m-auto my-8 bg-green-400 outline'>
+      <div className='h-[90px] w-[90px] rounded-full overflow-hidden m-auto my-8 bg-green-400'>
         <Image src={img} alt='profile image' unoptimized width={90} height={90} />
       </div>
 
@@ -83,16 +84,16 @@ export default function Sidebar() {
         </div>
 
         <div className='text-2xl text-blue-300 flex flex-col space-y-4 justity-center items-center my-5'>
-          <Link href={"#"} className='hover:text-blue-500'>
+          <Link href={"https://www.facebook.com"} target='_blank' className='hover:text-blue-500'>
             <FaFacebookF />
           </Link>
-          <Link href={"#"} className='hover:text-blue-500'>
+          <Link href={"https://web.whatsapp.com"} target='_blank' className='hover:text-blue-500'>
             <FaWhatsapp />
           </Link>
-          <Link href={"#"} className='hover:text-blue-500'>
+          <Link href={"https://www.linkedin.com/in/sarjeet-prajapati-8929861b8"} target='_blank' className='hover:text-blue-500'>
             <FaLinkedinIn />
           </Link>
-          <Link href={"#"} className='hover:text-blue-500'>
+          <Link href={"https://x.com/sarjeet_kumawat"} target='_blank' className='hover:text-blue-500'>
             <FaXTwitter />
           </Link>
         </div>

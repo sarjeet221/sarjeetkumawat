@@ -1,38 +1,32 @@
 import React, { useState } from 'react';
+import { GrCertificate } from "react-icons/gr";
 
+function download(certificate: string) {
+  const link = document.createElement("a");
+  link.href = certificate; 
+  link.download = "Certificate.pdf"; 
+  link.click();
+};
 export default function ExperienceBlock() {
   const experiance = [
     {
       srno: 0,
-      organization: "Ubuy Technologies", position: "Frontend Developer", duration: {
+      organization: "Ubuy Technologies, Jaipur", position: "Frontend Developer", duration: {
         join: { month: "Jun", year: "2024" },resign: { month: "Dec", year: "2024" },
       },
       description:
         "I collaborate on Ubuy's core Node.js-based and PHP-based projects, ensuring seamless integration between user interfaces and backend systems",
+        certificate:"/ubuy certificate.pdf",
+
     },
     {
       srno: 1,
-      organization: "Grras Solutions", position: "React Internship", duration: {
-        join: { month: "Mar", year: "2024" },resign: { month: "Jun", year: "2024" },
+      organization: "RAT Pvt. Ltd, Jaipur", position: "React Internship", duration: {
+        join: { month: "Mar", year: "2024" },resign: { month: "May", year: "2024" },
       },
       description:
         "I gained hands-on experience building dynamic, responsive web applications using React.js",
-    },
-    {
-      srno: 2,
-      organization: "Ubuy Technologies", position: "Frontend Developer", duration: {
-        join: { month: "Jun", year: "2024" },resign: { month: "Dec", year: "2024" },
-      },
-      description:
-        "I collaborate on Ubuy's core Node.js-based and PHP-based projects, ensuring seamless integration between user interfaces and backend systems",
-    },
-    {
-      srno: 3,
-      organization: "Grras Solutions", position: "React Internship", duration: {
-        join: { month: "Mar", year: "2024" },resign: { month: "Jun", year: "2024" },
-      },
-      description:
-        "I gained hands-on experience building dynamic, responsive web applications using React.js",
+        certificate:"/rat certificate.pdf",
     },
   ];
 
@@ -51,6 +45,7 @@ function Experienceunit({
   position,
   duration,
   description,
+  certificate,
 }: {
   srno: number;
   organization: string;
@@ -60,6 +55,7 @@ function Experienceunit({
     resign: { month: string; year: string };
   };
   description: string;
+  certificate:string;
 }) {
   const bgcolor = ["bg-[#ff517e]","bg-[#ffc454]","bg-[#ff754a]","bg-[#00c8da]","bg-[#87cefa]","bg-[#d8bfd8]","bg-[#ffcocb]","bg-[#faf0e6]",];
   const aftercolor = ["after:bg-[#ff517e]","after:bg-[#ffc454]","after:bg-[#ff754a]","after:bg-[#00c8da]","after:bg-[#87cefa]","after:bg-[#d8bfd8]","after:bg-[#ffcocb]","after:bg-[#faf0e6]",];
@@ -87,13 +83,14 @@ function Experienceunit({
         <div className="lg:text-[42px] text-[28px]">{duration.resign.year}</div>
       </div>
       <div className="p-4 shadow-md grid shadow-lg lgmax:basis-2/3 items-center grid-rows-2 text-left">
-        <div className=" mb-2 flex flex-col justify-evenly h-full">
+        <div className=" mb-2 flex flex-col justify-evenly h-full relative">
           <h2 className="text-xl font-semibold w1200:text-2xl leading-none capitalize">
             {position}
           </h2>
           <h3 className={`text-base font-semibold capitalize ${color[srno]}`}>
             {organization}
           </h3>
+          <div  onClick={() => download(certificate)}  className='text-xl absolute top-1 cursor-pointer end-2 p-1'><GrCertificate/></div>
         </div>
         <div className="border-t border-[#ccc] text-[#777777] relative pt-1">
           <span className="h-[45px] overflow-hidden block whitespace-wrap">

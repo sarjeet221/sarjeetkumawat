@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image';
 
-import img from '../../src/assets/1000184993-removebg-preview.png'
+import img from '../../src/assets/mainimgaehd.png'
 import PrimaryBtn from '@/atomes/PrimaryBtn';
 import ExperienceBlock from '@/atomes/ExperienceBlock';
 import { HeadingWithAfter, BigSubHeading } from '@/atomes/Heading';
@@ -21,9 +21,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-const fileUrl = '/sarjeet kumawat react developer.pdf';
 
-  export function handleDownload() {
+export function handleDownload() {
+    const fileUrl = '/sarjeet kumawat react developer.pdf';
     const link = document.createElement("a");
     link.href = fileUrl; 
     link.download = "Sarjeet resume.pdf"; 
@@ -72,7 +72,7 @@ function WlcSection() {
   return (
     <div className="img_section relative max-w-[1700px] w-full mx-auto">
       <div ref={element} className='flex justify-center absolute lgmax:left-0 lgmax:right-0 right-[55px] z-[-10] lgmax:w-full lg:h-[720px]'>
-        <Image src={img} alt='profile image' unoptimized fetchPriority="high" className='max-h-full w-auto h-full' />
+        <Image src={img} alt='profile image' priority={true} fetchPriority="high" className='max-h-full w-auto h-full' />
       </div>
       <div className='pt-[350px] smlmax:grid gap-6'>
         <div className='z-[10] sml:ps-[5%] mdmax:px-5 '>
