@@ -22,7 +22,7 @@ export default function ExperienceBlock() {
     {
       srno: 1,
       organization: "RAT Pvt. Ltd, Jaipur", position: "React Internship", duration: {
-        join: { month: "Mar", year: "2024" },resign: { month: "May", year: "2024" },
+        join: { month: "January", year: "2024" },resign: { month: "May", year: "2024" },
       },
       description:
         "I gained hands-on experience building dynamic, responsive web applications using React.js",
