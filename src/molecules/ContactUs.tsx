@@ -144,7 +144,7 @@ export default function ContactUs() {
                             Address
                         </h4>
                         <p className='text-base font-medium mt-2'>
-                            Sumer nagar isckon road, mansarover jaipur(302020)
+                        Sumer nagar, mansarover, jaipur, India (302020)
                         </p>
                     </div>
                 </div>

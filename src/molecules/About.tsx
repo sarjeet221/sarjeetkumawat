@@ -11,7 +11,7 @@ import { handleDownload } from '@/organism/MainSection';
 export default function About() {
   const [pivisiblity, setpivisiblity] = useState<boolean>(false)
   const pi = [{
-    "Age": 23, "Address": "sumeer nagar mansarodver", "email": "sarjeet@gmail.com", "Residance": "India", "phonme": "85xx818xxx"
+    "Age": 23, "Address": "Sumer nagar, mansarover, jaipur, India (302020)", "email": "sarjeetkumawatxxx@gmail.com", "Residance": "India", "Mobile": "85xx8x83xx"
   }]
 
   function pishow() {

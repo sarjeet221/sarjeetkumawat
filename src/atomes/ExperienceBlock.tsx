@@ -90,7 +90,7 @@ function Experienceunit({
           <h3 className={`text-base font-semibold capitalize ${color[srno]}`}>
             {organization}
           </h3>
-          <div  onClick={() => download(certificate)}  className='text-xl absolute top-1 cursor-pointer end-2 p-1'><GrCertificate/></div>
+          <div  onClick={() => download(certificate)}  className='text-xl absolute top-1 cursor-pointer end-2 p-1' title='Download certificate'><GrCertificate/></div>
         </div>
         <div className="border-t border-[#ccc] text-[#777777] relative pt-1">
           <span className="h-[45px] overflow-hidden block whitespace-wrap">

@@ -17,6 +17,7 @@ import About from '@/molecules/About';
 import gsap from 'gsap';
 import { Brandslider } from '@/molecules/Testimonial';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Skills from '@/molecules/Skills';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,7 +82,7 @@ function WlcSection() {
             <span className='text-[#fff]'>HELLO!</span> Stranger!</h2>
           <h2 className='animated-heading lg:text-[72px] text-[42px] text-green-800 font-bold leading-none lg:my-4 my-2 '>Mr. Sarjeet Kumawat</h2>
           <p className='ps-2 lg:text-[32px] relative text-[24px] smlmax:text-lg
-          after:content-[""] after:block after:h-full after:w-[3px] after:bg-blue-400 after:rounded after:absolute after:start-0 after:top-0 '>Freelance Front-End Developer</p>
+          after:content-[""] after:block after:h-full after:w-[3px] after:bg-blue-400 after:rounded after:absolute after:start-0 after:top-0 '>Freelance Web Developer</p>
           <div className="btn mt-8 flex space-x-4">
             <PrimaryBtn event={handleDownload}>Download Cv</PrimaryBtn>
             <PrimaryBtn event={() => {const contactElement = document.querySelector("#contact");if (contactElement) {contactElement.scrollIntoView({ behavior: "smooth" });}}}
@@ -141,14 +142,19 @@ export default function MainSection() {
 
         <ExperienceBlock />
       </div>
+
+      
+        <Skills />
+        
       <div className="services bg-[#fff] animate-on-scroll">
         <div className='text-center mb-12'>
           <HeadingWithAfter>Take a look</HeadingWithAfter>
           <BigSubHeading>My Services</BigSubHeading>
         </div>
         <Services />
-
       </div>
+
+
       <div id='Portfolio' className="projects bg-[#fff] animate-on-scroll">
         <div className='text-center mb-12'>
           <HeadingWithAfter>Quality Work</HeadingWithAfter>
